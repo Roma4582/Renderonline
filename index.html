@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <title>3D Редактор на чистому JS</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Підключення Three.js через Import Map -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com",
+        "three/addons/": "https://unpkg.com"
+      }
+    }
+  </script>
+</head>
+<body>
+  <!-- Панель інструментів -->
+  <div id="toolbar">
+    <button id="btn-add-cube">+ Куб</button>
+    <button id="btn-add-sphere">+ Сфера</button>
+    <div class="divider"></div>
+    <button id="btn-mode-translate" class="active">Переміщення (W)</button>
+    <button id="btn-mode-rotate">Обертання (E)</button>
+    <button id="btn-mode-scale">Масштаб (R)</button>
+    <div class="divider"></div>
+    <input type="color" id="color-picker" value="#00a8ff" title="Колір об'єкта" />
+    <button id="btn-delete">Видалити</button>
+    <div class="divider"></div>
+    <button id="btn-save" class="primary">💾 Зберегти на ПК (.glb)</button>
+    <button id="btn-open">📂 Відкрити (.glb)</button>
+  </div>
+
+  <!-- Область для 3D-сцени -->
+  <div id="viewport"></div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

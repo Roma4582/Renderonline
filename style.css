@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+  overflow: hidden;
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+#viewport {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+}
+
+#toolbar {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(35, 35, 38, 0.9);
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1px solid #3e3e42;
+  backdrop-filter: blur(8px);
+  z-index: 10;
+}
+
+button {
+  background: #2d2d30;
+  color: #e0e0e0;
+  border: 1px solid #454545;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #3e3e42;
+}
+
+button.active {
+  background: #007acc;
+  border-color: #0098ff;
+  color: #fff;
+}
+
+button.primary {
+  background: #28a745;
+  border-color: #34ce57;
+  color: #fff;
+  font-weight: 600;
+}
+
+button.primary:hover {
+  background: #218838;
+}
+
+input[type="color"] {
+  width: 32px;
+  height: 30px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.divider {
+  width: 1px;
+  height: 20px;
+  background: #454545;
+  margin: 0 4px;
+}
